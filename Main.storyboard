@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Type View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="MyTypeViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.75294119119644165" green="0.058823529630899429" blue="0.96470588445663452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <connections>
+                        <segue destination="Poz-RR-66b" kind="show" identifier="DrawLetters" id="6Rx-cH-JNj"/>
+                        <segue destination="As5-Hu-wM9" kind="show" identifier="writeTxt" id="6f2-ES-jaJ"/>
+                        <segue destination="0Kt-nl-8K4" kind="show" identifier="EditFonts" id="CIy-Mq-xdG"/>
+                        <segue destination="lQF-Yl-yKQ" kind="show" identifier="Actualizer" id="jHj-JB-9T3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="133"/>
+        </scene>
+        <!--Use Font View Controller-->
+        <scene sceneID="9fH-Uu-dpf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="As5-Hu-wM9" customClass="UseFontViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MMJ-oT-p2U" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.56255626678466797" green="0.30933547019958496" blue="0.92741113901138306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="vPB-wS-Rwn"/>
+                    </view>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="DoneTexting" id="AaC-fL-fYf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57Q-Al-3NT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-575"/>
+        </scene>
+        <!--Font Created View Controller-->
+        <scene sceneID="rxM-BA-eBM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BiY-hR-hKv" customClass="FontCreatedViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8F-L8-BkH" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.72337766545642002" green="0.33998528493244989" blue="0.93163016272075283" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="OLB-mg-1cY"/>
+                    </view>
+                    <connections>
+                        <segue destination="0Kt-nl-8K4" kind="show" identifier="FontCreated" id="pOI-ri-1hR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fn5-yK-WuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="-575"/>
+        </scene>
+        <!--Draw View Controller-->
+        <scene sceneID="acu-t2-fEf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Poz-RR-66b" customClass="DrawViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shg-6k-gzo" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89667969942092896" green="0.36390966176986694" blue="0.89775413274765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="g8p-UR-Yuv"/>
+                    </view>
+                    <connections>
+                        <segue destination="BiY-hR-hKv" kind="show" identifier="finDrawing" id="0YB-FC-lG2"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="goingHome" id="iKS-IZ-slE"/>
+                        <segue destination="0Kt-nl-8K4" kind="show" identifier="DoneEditWithDraw" id="sYN-yi-efw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAc-kH-EAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="132.68365817091455"/>
+        </scene>
+        <!--Edit Fonts View Controller-->
+        <scene sceneID="e7O-gb-uUQ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="0Kt-nl-8K4" customClass="EditFontsViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Srl-3q-opQ" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93724429618428917" green="0.73035485836731007" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="G86-5c-DWY"/>
+                    </view>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="DoneEditing" id="p3Z-3D-Ytn"/>
+                        <segue destination="dGd-Td-CcR" kind="show" identifier="EditWithCam" id="wSR-G3-XE0"/>
+                        <segue destination="Poz-RR-66b" kind="show" identifier="editWithDraw" id="ddg-kB-ew0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aew-0Z-6pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="133"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="9n4-RK-hlO">
+            <objects>
+                <viewController id="lQF-Yl-yKQ" customClass="CameraViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X8n-KP-fmf" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92416560649871826" green="0.29934877157211304" blue="0.49526941776275635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="gyv-Rn-AcT"/>
+                    </view>
+                    <connections>
+                        <segue destination="BiY-hR-hKv" kind="show" identifier="LoadHome" id="EVH-0O-jKa"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="goinHome" id="ISH-Vj-Z0d"/>
+                        <segue destination="0Kt-nl-8K4" kind="show" identifier="DoneEditingWithCam" id="pyw-Eq-bYw"/>
+                        <segue destination="dGd-Td-CcR" kind="presentation" identifier="NextLetter" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="0fb-tA-U2J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoI-d0-Y11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="833.43328335832086"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="6DB-rU-FU4">
+            <objects>
+                <viewController storyboardIdentifier="PhotoVC" id="dGd-Td-CcR" customClass="PhotoViewController" customModule="MyType" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpH-sf-2cy" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now The Letter: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-X9-2rn">
+                                <rect key="frame" x="16" y="33" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbP-ZT-FB1">
+                                <rect key="frame" x="115" y="606" width="156" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="TakePhoto:" destination="dGd-Td-CcR" eventType="touchUpInside" id="MPO-6k-F8a"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-H1-tdx">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpy-O6-3xq">
+                                <rect key="frame" x="169" y="26" width="38" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.064089004351195022" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54c-8v-6Nb">
+                                <rect key="frame" x="152" y="296" width="70" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="maO-jK-bxj"/>
+                    </view>
+                    <connections>
+                        <outlet property="LetterOn" destination="jpy-O6-3xq" id="hGs-mS-3qh"/>
+                        <outlet property="TakePicBtn" destination="JbP-ZT-FB1" id="Ou3-ze-egh"/>
+                        <outlet property="guideBox" destination="54c-8v-6Nb" id="emR-qa-b5r"/>
+                        <outlet property="guideLetter" destination="ibN-H1-tdx" id="7R7-oJ-M6V"/>
+                        <segue destination="lQF-Yl-yKQ" kind="show" identifier="LoadPictures" id="ZFr-zF-9xJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ums-QC-Ztu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="832.53373313343332"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0fb-tA-U2J"/>
+        <segue reference="jHj-JB-9T3"/>
+        <segue reference="pyw-Eq-bYw"/>
+        <segue reference="6Rx-cH-JNj"/>
+        <segue reference="EVH-0O-jKa"/>
+        <segue reference="ISH-Vj-Z0d"/>
+    </inferredMetricsTieBreakers>
+</document>
